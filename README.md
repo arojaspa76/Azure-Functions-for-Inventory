@@ -171,7 +171,7 @@ Edit `local.settings.json`:
 }
 ```
 
-> 🔒 Never commit real connection strings to GitHub.
+> Never commit real connection strings to GitHub.
 
 ### 3.3. Implement `inventory_stats` in `function_app.py`
 
@@ -626,7 +626,7 @@ python agent_inventory.py \
 - **Fix**:
 
   ```python
-  client.agents.enable_auto_tool_calls(functions=[get_inventory_kpis])
+  client.agents.enable_auto_function_calls(tools=[get_inventory_kpis])
   ```
 
 ### 8.4. Assistant output printed as Python structures
@@ -666,10 +666,3 @@ AGENT_ID="<agent-id-created-with-cli>"
 
 ---
 
-## 10. Next Steps (Optional)
-
-Now you have:
-
-- LLM agent in Foundry (ReAct + tool-calling)
-- Azure Function backend reading real data from Blob
-- Python CLI to interact with the agent and see formatted answers
